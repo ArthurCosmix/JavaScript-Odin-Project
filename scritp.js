@@ -14,6 +14,8 @@ const computerSelection = function(){
 //store score in every round
 const playerScore = []
 const computerScore = []
+let playerLastScore = null
+let computerLastScore = null
 
 const rockPaperScissor = function(playerSelection, computerSelection){
     const result = {}
@@ -59,15 +61,33 @@ const runGame = function(){
         console.log(rockPaperScissor("rocK", computerSelection()))
     }
 
+    playerLastScore = playerScore.reduce((total, score) => total += score , 0)
+    computerLastScore = computerScore.reduce((total, score) => total += score , 0)
+
 
     if(playerLastScore > computerLastScore){
-        console.log("Congratulation Player won!!")
+        console.log({
+            theWinner : "Player",
+            comTotalScore : computerLastScore,
+            playerTotalScore : playerLastScore,
+            text : "Congratulation Player won!!"
+        })
     }
     else if( computerLastScore > playerLastScore){
-        console.log("Congratulation Computer won!!")
+        console.log({
+            theWinner : "Computer",
+            comTotalScore : computerLastScore,
+            playerTotalScore : playerLastScore,
+            text : "Congratulation Computer won!!"
+        })
     }
     else{
-        console.log("This compitetion is Draw!!!")
+        console.log({
+            theWinner : "This competition is Draw",
+            comTotalScore : computerLastScore,
+            playerTotalScore : playerLastScore,
+            text : "Congratulation you two won!!"
+        })
     }
 }
 runGame()
