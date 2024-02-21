@@ -24,6 +24,41 @@
 
 </head>
 <body>
+    
+    <section class="game-section">
+        <div class="score-board">
+            <h4>Score board</h4>
+            <p class="player-score"></p>
+            <p class="computer-score"></p>
+        </div>
+        <div class="game-container">
+            <div class="container">
+                <div class="selection-elements rock-con">
+                  <img src="assets/rock.png" alt="" class="rock-select selection" id="rock">
+                </div>
+                <div class="selection-elements paper-con" > 
+                  <img src="assets/paper.png" alt="" class="paper-select selection" id="paper">
+                </div>
+                <div class="selection-elements scissor-con" >
+                  <img src="assets/scissor.png" alt="" class="scissor-select selection" id="scissor">
+                </div>
+        </div>
+
+        <div class="winner-board">
+            <h2 class="winner-label">The winner is</h2>
+            <div class="winner-borader-container">
+                <div class="player-side">
+                    <span class="player">Player</span>
+                    <img src="assets/paper.png" alt="" class="winner-board-image player-image">
+                </div>
+                <p class="winner-text">player</p>
+                <div class="com-side">
+                    <span class="computer">Computer</span>
+                    <img src="assets/rock.png" alt="" class="winner-board-image computer-image">
+                </div>
+            </div>
+        </div>
+    </section>
     <!-----
         require script.js 
     ------->
